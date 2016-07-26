@@ -1,14 +1,14 @@
-<h3>Open ID Connect ID Token</h3>
+<h3>Open ID Connect Token ID</h3>
 <p>
-    Because you requested the token using <code>scope=openid</code>, you have also received an
-    ID token!
+    Como has hecho tu petición de token con <code>scope=openid</code>, también has recibido un
+    Token ID!
 </p>
 
-<pre><code>  ID Token: {{ id_token }}  </code></pre>
+<pre><code>  Token ID: {{ id_token }}  </code></pre>
 
 {% set jwt = id_token|split('.') %}
 
-<p>This token contains the following information about the user: </p>
+<p>Este token contiene la siguiente información sobre el usuario: </p>
 
 <pre>
 {{ jwt[1] | base64_decode | json_stringify }}

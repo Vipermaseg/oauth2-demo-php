@@ -1,10 +1,10 @@
 {% extends "client/base.twig" %}
 
 {% block content %}
-    <h3>Resource Request Complete!</h3>
+    <h3>¡Petición de recurso completada!</h3>
     {% if response.friends is defined %}
         <p>
-            You have successfully called the APIs with your Access Token.  Here are your friends:
+            Has llamado con éxito a las APIs con tu Token de acceso. Aquí están tus amigos:
         </p>
 
         <ul>
@@ -13,15 +13,15 @@
             {% endfor %}
         </ul>
 
-        <p>Here is the full JSON response: </p>
+        <p>Aquí está la respuesta completa en JSON: </p>
 
         <pre>{{ response|json_stringify }}</pre>
     {% else %}
-        <h4>Response:</h4>
+        <h4>Respuesta:</h4>
         {% include 'client/_error.twig' %}
     {% endif %}
 
-    <pre><code>  The API call can be seen at <a href="{{ resource_uri }}" target="_blank">{{resource_uri}}</a></code></pre>
+    <pre><code>  La llamada a la API puede verse en <a href="{{ resource_uri }}" target="_blank">{{resource_uri}}</a></code></pre>
 
-    <a href="{{ path('homepage') }}">back</a>
+    <a href="{{ path('homepage') }}">volver</a>
 {% endblock %}

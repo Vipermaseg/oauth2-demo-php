@@ -1,4 +1,4 @@
 <p>
-    The <code>Authorization Code</code> grant type is the most common workflow for OAuth2.0.  Clicking the "Authorize" button below will send you to an OAuth2.0 Server to authorize:
+    El tipo de concesión de <code>Código de autorización</code> es el más común de OAuth2.0.  Haz click en el botón "Autorizar" para ir al Servidor OAuth2.0 para autorizar:
 </p>
-<a class="button" href="{{ app.parameters.authorize_route|slice(0, 4) == 'http' ? app.parameters.authorize_route : url(app.parameters.authorize_route) }}?response_type=code&client_id={{app.parameters.client_id}}&redirect_uri={{ url('authorize_redirect')|url_encode() }}&state={{session_id}}">Authorize</a>
+<a class="button" href="{{ app.parameters.authorize_route|slice(0, 4) == 'http' ? app.parameters.authorize_route : url(app.parameters.authorize_route) }}?response_type=code&client_id={{app.parameters.client_id}}&redirect_uri={{ url('authorize_redirect')|url_encode() }}&state={{session_id}}">Autorizar</a>

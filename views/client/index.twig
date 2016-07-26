@@ -1,17 +1,17 @@
 {% extends "client/base.twig" %}
 
 {% block content %}
-    <h3>OAuth2.0 Demo Application</h3>
+    <h3>Aplicación Demo de OAuth2.0</h3>
     <p>
-        Welcome to the OAuth2.0 Demo Application!  This is an application that demos some of the basic OAuth2.0 Workflows.
+        ¡Bienvenido a la aplicación demo de OAuth2.0! Aquí demostraremos algunos de los workflows básicos de OAuth2.0.
     </p>
 
     <div class="simpleTabs">
         <ul class="simpleTabsNavigation">
-            <li><a href="#authcode">Authorization Code</a></li>
-            <li><a href="#implicit">Implicit</a></li>
-            <li><a href="#usercred">User Credentials</a></li>
-            <li><a href="#refresh">Refresh Token</a></li>
+            <li><a href="#authcode">Código de autorización</a></li>
+            <li><a href="#implicit">Implícito</a></li>
+            <li><a href="#usercred">Credenciales de usuario</a></li>
+            <li><a href="#refresh">Token de refresco</a></li>
             <li><a href="#openid">OpenID Connect</a></li>
         </ul>
         <div class="simpleTabsContent">{% include 'client/grant_types/_authorization_code.twig' %}</div>
